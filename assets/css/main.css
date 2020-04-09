@@ -1,0 +1,22 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+.wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+img {
+    display: none; /* jQuery */
+    width: 700px;
+    height: 500px;
+}
+
+.active {
+    display: block;
+}
