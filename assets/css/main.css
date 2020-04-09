@@ -11,10 +11,47 @@
     height: 100vh;
 }
 
+.images {
+    position: relative;
+}
+
 img {
     display: none; /* jQuery */
     width: 700px;
     height: 500px;
+    border-radius: 5px;
+}
+
+
+.arrow-left,
+.arrow-right {
+    font-size: 38px;
+    margin: 0 20px;
+    cursor: pointer;
+}
+
+
+.img-counter ul {
+    position: absolute;
+    bottom: 10%;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    background: rgba(20, 20, 20, .7);
+    padding: 20px;
+    border-radius: 20px;
+}
+
+.img-counter ul li{
+    list-style: none;
+    border-radius: 50%;
+    background: rgba(0, 0, 255, .5);
+    padding: 8px;
+    margin: 0 10px;
+}
+
+.img-counter ul li.active-counter {
+    background: rgba(0, 0, 255, 1);
 }
 
 .active {
