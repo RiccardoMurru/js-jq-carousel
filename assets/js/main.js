@@ -16,8 +16,25 @@
 
 
     // cambio immagine a click su freccia avanti
-    arrowRight.click(function() {
+    arrowRight.click(forward);
 
+    
+    // cambio immagine a click su freccia indietro
+    arrowLeft.click(backwards);
+    
+    // cambio immagine con frecce keyboard
+    $(document).keydown(function(ev) {
+        if (ev.keyCode == 39) {
+            forward();
+        } else if (ev.keyCode == 37) {
+            backwards();
+        }
+    });
+
+
+    
+    // funzione scorrimento in avanti
+    function forward() {
         var activeImage = $('.active');
         var activeCounter = $('.active-counter')
 
@@ -36,11 +53,11 @@
         if (activeCounter.hasClass('last-counter')) {
             counterFirst.toggleClass('active-counter');
         }
-    });
+    };
 
-    // cambio immagine a click su freccia indietro
-    arrowLeft.click(function() {
-        
+
+    // funzione scorrimento indietro
+    function backwards() {
         var activeImage = $('.active');
         var activeCounter = $('.active-counter')
 
@@ -59,8 +76,7 @@
         if (activeCounter.hasClass('first-counter')) {
             counterLast.toggleClass('active-counter');
         }
-        
-    });
+    };
 
 
  // end document ready   
